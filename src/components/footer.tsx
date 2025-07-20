@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Logo } from './logo';
-import { Github, Twitter, Facebook } from 'lucide-react';
+import { Twitter, Facebook } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -19,9 +19,6 @@ export function Footer() {
             </Link>
             <Link href="#" aria-label="Twitter">
               <Twitter className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
-            </Link>
-            <Link href="#" aria-label="GitHub">
-              <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
             </Link>
           </div>
         </div>
