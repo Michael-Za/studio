@@ -4,47 +4,26 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%; /* خلفية فاتحة جداً مائلة للزرقة */
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100% / 0.7; /* شفافية للبطاقات */
+    --card: 0 0% 100% / 0.6;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100% / 0.8;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 208 80% 50%; /* أزرق iOS أكثر حيوية */
+    --primary: 215 100% 50%; /* iOS Blue */
     --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96.1% / 0.5;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 46 100% 58%;
-    --accent-foreground: 46 80% 10%;
+    --accent: 45 100% 50%; /* Gold/Warning for stars */
+    --accent-foreground: 45 80% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 214.3 31.8% 91.4% / 0.6;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 208 80% 50%;
-    --radius: 1.25rem; /* زوايا أكثر استدارة ونعومة */
-  }
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 10% / 0.7;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 5% / 0.8;
-    --popover-foreground: 210 40% 98%;
-    --primary: 208 80% 60%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5% / 0.5;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 46 100% 58%;
-    --accent-foreground: 46 80% 10%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 217.2 32.6% 17.5% / 0.6;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 208 80% 60%;
+    --border: 214.3 31.8% 91.4% / 0.4;
+    --input: 214.3 31.8% 91.4% / 0.5;
+    --ring: 215 100% 50%;
+    --radius: 1.5rem;
   }
 }
 
@@ -53,16 +32,23 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
-    background-image: radial-gradient(at 0% 0%, hsla(208, 80%, 50%, 0.05) 0, transparent 50%),
-                      radial-gradient(at 100% 100%, hsla(46, 100%, 58%, 0.05) 0, transparent 50%);
+    @apply bg-background text-foreground transition-colors duration-500 antialiased;
+    background-attachment: fixed;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(215, 100%, 50%, 0.12) 0, transparent 40%),
+      radial-gradient(at 100% 100%, hsla(45, 100%, 50%, 0.1) 0, transparent 40%),
+      radial-gradient(at 50% 50%, hsla(215, 100%, 50%, 0.05) 0, transparent 60%);
   }
 }
 
-.glass {
-  @apply bg-card/70 backdrop-blur-xl border border-white/20 shadow-xl;
+.ios-glass {
+  @apply bg-white/60 backdrop-blur-2xl border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
 }
 
-.glass-dark {
-  @apply bg-black/20 backdrop-blur-xl border border-white/10 shadow-xl;
+.ios-card-hover {
+  @apply transition-all duration-300 hover:shadow-[0_20px_40px_0_rgba(0,0,0,0.08)] hover:-translate-y-1;
+}
+
+.font-headline {
+  letter-spacing: -0.025em;
 }
