@@ -1,5 +1,24 @@
-# Firebase Studio
+# صنايعي اكسبرس (Sanaiee Express)
 
-This is a NextJS starter in Firebase Studio.
+منصة عصرية لحجز خدمات الحرفيين في مصر، مصممة بتجربة مستخدم سلسة واحترافية مستوحاة من نمط iOS (Glassmorphism).
 
-To get started, take a look at src/app/page.tsx.
+## المميزات
+- **تصميم زجاجي (Glassmorphism):** واجهة مستخدم تعتمد على الشفافية وتأثيرات البلور (Backdrop Blur).
+- **تجربة مستخدم iOS:** حركات انسيابية، زوايا دائرية كبيرة، وظلال ناعمة.
+- **دعم كامل للغة العربية:** استخدام خط IBM Plex Sans Arabic لمظهر عصري وواضح.
+- **لوحات تحكم ذكية:** لوحات منفصلة للعملاء وللحرفيين لإدارة الطلبات والعروض بسهولة.
+
+## التقنيات المستخدمة
+- **Next.js 15** (App Router)
+- **React 18**
+- **Tailwind CSS**
+- **ShadCN UI**
+- **Lucide Icons**
+- **Genkit** (للميزات الذكية)
+
+## البدء
+لتشغيل المشروع محلياً:
+```bash
+npm install
+npm run dev
+```
